@@ -20,5 +20,10 @@ class UserController extends BaseController {
 		return View::make('user.login');
 	}
 
+	public function show_register()
+	{
+		return View::make('user.register');
+	}
+
 
 }

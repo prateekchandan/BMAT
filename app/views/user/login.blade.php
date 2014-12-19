@@ -18,19 +18,21 @@
     </section><!--/#title-->     
 
     <section id="registration" class="container">
-        <form class="center" role="form">
-            <fieldset class="registration-form">
-                <div class="form-group">
-                    <input type="text" id="username" name="username" placeholder="Username" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-success btn-md btn-block">Login</button>
-                </div>
-            </fieldset>
-        </form>
+        <div class="col-md-6">
+            <form class="center" role="form">
+                <fieldset class="registration-form">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-md btn-block">Login</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </section><!--/#registration-->
 
 @endsection

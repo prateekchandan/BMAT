@@ -27,16 +27,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="{{URL::asset('images/logo1.png')}}" alt="logo" style="max-height:60px"></a>
+                <a class="navbar-brand" href="{{URL::Route('home')}}"><img src="{{URL::asset('images/logo1.png')}}" alt="logo" style="max-height:60px"></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="{{URL::Route('home')}}">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="services.html">Program</a></li>
                     <li><a href="portfolio.html">FAQs</a></li>
                     <li><a href="portfolio.html">Sample Questions</a></li>
-                    <li><a href="portfolio.html">Register</a></li>
+                    <li><a href="{{URL::Route('register')}}">Register</a></li>
                     <li><a href="{{URL::Route('login')}}">Login</a></li>
                 </ul>
             </div>
