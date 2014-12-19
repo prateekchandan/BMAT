@@ -20,7 +20,7 @@
     <section id="registration" class="container">
     <div class="col-md-6">
         <h2>Application Process</h2>
-        <form class="" role="form">
+        <form class="" role="form" method="post" onsubmit="return verify();">
             <fieldset class="registration-form" style="width:100%">
                 <div class="form-group row">
                 <label class="col-md-3">Select Plan</label>
@@ -98,6 +98,11 @@
                         <input type="password" id="password_confirm" name="password_confirm" placeholder="Password (Confirm)" class="form-control" required>
                     </div>
                 </div>
+                <div class="alert alert-danger" role="alert" style="display:none" id="pass-error">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Password Mismatch
+                </div>
                 <div class="form-group">
                     <button class="btn btn-success btn-md btn-block">Register</button>
                 </div>
@@ -157,5 +162,17 @@
     </div>
     </section><!--/#registration-->
 
-
+<script type="text/javascript">
+    function verify() {
+        if($('#password').val()!=$('#password_confirm').val())
+        {
+            alert($('#password').val());
+            $('#password_confirm').val("");
+            $('#pass-error').css('display','block');
+            return false;
+        }
+        $('#pass-error').css('display','none');
+        return true;
+    }
+</script>
 @endsection

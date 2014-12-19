@@ -31,6 +31,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    @if(!Auth::check())
                     <li><a href="{{URL::Route('home')}}">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="services.html">Program</a></li>
@@ -38,6 +39,15 @@
                     <li><a href="portfolio.html">Sample Questions</a></li>
                     <li><a href="{{URL::Route('register')}}">Register</a></li>
                     <li><a href="{{URL::Route('login')}}">Login</a></li>
+                    @else
+                    <li><a href="{{URL::Route('home')}}">Home</a></li>
+                    <li><a href="#">Program</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="{{URL::Route('logout')}}">Logout</a></li>
+
+
+                    @endif
                 </ul>
             </div>
         </div>

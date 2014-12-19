@@ -18,9 +18,16 @@
     </section><!--/#title-->     
 
     <section id="registration" class="container">
-        <div class="col-md-6">
-            <form class="center" role="form">
+            <form class="center" role="form" method="post">
+                    
                 <fieldset class="registration-form">
+                    @if (Session::get('messages') != null)
+                         <div class="alert alert-danger" role="alert" id="pass-error">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Email / Password Error
+                        </div>
+                    @endif
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Email" class="form-control" required>
                     </div>
@@ -32,7 +39,6 @@
                     </div>
                 </fieldset>
             </form>
-        </div>
     </section><!--/#registration-->
 
 @endsection
