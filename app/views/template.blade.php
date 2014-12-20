@@ -35,7 +35,7 @@
                     <li><a href="{{URL::Route('home')}}">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="services.html">Program</a></li>
-                    <li><a href="portfolio.html">FAQs</a></li>
+                    <li><a href="{{URL::Route('faq')}}">FAQs</a></li>
                     <li><a href="portfolio.html">Sample Questions</a></li>
                     <li><a href="{{URL::Route('register')}}">Register</a></li>
                     <li><a href="{{URL::Route('login')}}">Login</a></li>
@@ -70,7 +70,7 @@
                             <li><a href="#">Meet The Team</a></li>
                             <li><a href="#">Our Awesome Partners</a></li>
                             <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Frequently Asked Questions</a></li>
+                            <li><a href="{{URL::Route('faq')}}">Frequently Asked Questions</a></li>
                             <li><a href="#">Conatct Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Use</a></li>

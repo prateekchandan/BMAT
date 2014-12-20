@@ -7,3 +7,5 @@ Route::post('login',array('before'=>'guest','as'=>'login','uses'=>'UserControlle
 Route::get('register',array('before'=>'guest','as'=>'register','uses'=>'UserController@show_register'));
 Route::post('register',array('before'=>'guest','as'=>'register','uses'=>'UserController@register'));
 Route::any('logout',array('before'=>'login','as'=>'logout','uses'=>'UserController@logout'));
+
+Route::get('FAQs',array('as'=>'faq','uses'=>'HomeController@faq'));

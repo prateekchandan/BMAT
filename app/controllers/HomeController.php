@@ -20,5 +20,11 @@ class HomeController extends BaseController {
 		return View::make('home');
 	}
 
+	// Generate FAQ Page
+	public function faq()
+	{
+		return View::make('page.faq');
+	}
+
 
 }
